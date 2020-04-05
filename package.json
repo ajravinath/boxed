@@ -1,0 +1,39 @@
+{
+  "name": "boxed",
+  "version": "1.0.0",
+  "description": "games from checkboxes for checkbo.. sorry people ! 🏁",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ajravinath/boxed.git"
+  },
+  "keywords": [],
+  "author": "⚡ @rapiddeath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajravinath/boxed/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.5",
+    "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "exports-loader": "^0.7.0",
+    "node-sass": "^4.13.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.1"
+  }
+}
