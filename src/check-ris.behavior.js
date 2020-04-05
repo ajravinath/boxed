@@ -65,5 +65,6 @@ const startInterval = (currentLevel, checkRisGame) => {
 };
 
 const setResult = (result) => $('#result').text(result);
+const setScore = (score) => $('#score').text(score);
 
-export { submitLevel, startInterval, setResult };
+export { submitLevel, startInterval, setResult, setScore };

@@ -1,12 +1,13 @@
 function CheckRis(
-  GRID_COLS = 15,
-  COL_SPREAD = 5,
+  GRID_COLS = 12,
   DYNAMIC_COL_SPREAD = true,
-  MAX_LEVELS = 20,
+  MAX_LEVELS = 15,
   LEVEL_INITIAL = 0,
   SPEED_MS = 50,
   INTERACTION_KEY_CODE = 32
 ) {
+  const COL_SPREAD = Math.floor(GRID_COLS / 3);
+
   this.GRID_COLS = GRID_COLS;
   this.COL_SPREAD = COL_SPREAD;
   this.COL_SPREAD_DEFAULT = COL_SPREAD;
