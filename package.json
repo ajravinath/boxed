@@ -1,7 +1,7 @@
 {
-  "name": "covid-stats",
-  "version": "3.0.0",
-  "description": "A dashboard for covid-19 outb\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dstatistical dashboard for covid-19 outbreak",
+  "name": "boxed",
+  "version": "1.0.0",
+  "description": "games from checkboxes for checkbo.. sorry people ! 🏁",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
@@ -10,19 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ajravinath/covid-sl.git"
+    "url": "https://github.com/ajravinath/boxed.git"
   },
-  "keywords": [
-    "covid",
-    "covid-19",
-    "dashboard"
-  ],
+  "keywords": [],
   "author": "⚡ @rapiddeath",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ajravinath/covid-sl/issues"
+    "url": "https://github.com/ajravinath/boxed/issues"
   },
-  "homepage": "https://github.com/ajravinath/covid-sl#readme",
   "devDependencies": {
     "autoprefixer": "^9.7.5",
     "css-loader": "^3.4.2",
