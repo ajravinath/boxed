@@ -1,6 +1,6 @@
 {
   "name": "boxed",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "games from checkboxes for checkbo.. sorry people ! 🏁",
   "main": "index.js",
   "scripts": {
