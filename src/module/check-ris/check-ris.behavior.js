@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 const submitLevel = (checkRisGame) => {
   let lost = 0;
   if (checkRisGame.LEVEL > 1) {

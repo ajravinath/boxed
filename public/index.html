@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/package_1f4e6.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.materialdesignicons.com/5.0.45/css/materialdesignicons.min.css"
+      crossorigin="anonymous"
+    />
+    <title>Boxed</title>
+  </head>
+  <body>
+    <div id="jumbotron" class="jumbotron d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center my-auto">
+          <div class="col">
+            <div class="row">
+              <div class="col align-self-center mx-auto mb-1">
+                <h5
+                  id="gameTitle"
+                  title="err, or Checkbox Tetris? 🤷‍♂️"
+                  class="text-muted text-center lead heading"
+                >
+                  Boxed 📦
+                </h5>
+              </div>
+            </div>
+            <div class="row text-center mb-2">
+              <div class="col">
+                <span
+                  class="badge badge-pill badge-success text-center mb-0"
+                  id="score"
+                  >0</span
+                >
+              </div>
+            </div>
+            <div class="row my-auto">
+              <div id="grid" class="m-auto"></div>
+            </div>
+            <div class="row my-2 pt-1">
+              <div class="col align-self-center text-center result">
+                <h6 class="text-muted text-center" id="result"></h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="controller-wrapper"></div>
+      </div>
+    </div>
+    <div id="footer" class="row pb-3 pt-1 mt-1 row mx-auto">
+      <div class="col">
+        <div class="row pb-1 test ui-tooltip" style="position: relative;">
+          <span
+            id="info"
+            title="Touch to start on mobile, space for desktop. First row will be filled for you !"
+            class="ui-tooltip-content text-muted align-self-center text-center mx-auto"
+            >🙋‍♂️</span
+          >
+        </div>
+        <div class="row">
+          <small
+            id="contrib"
+            class="text-muted align-self-center text-center mx-auto"
+          >
+          </small>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../src/index.js"></script>
+  </body>
+</html>
