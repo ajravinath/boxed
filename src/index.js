@@ -1,95 +1,43 @@
 import 'bootstrap';
 import './app.scss';
-import CheckRis from './check-ris';
-import drawGame from './check-ris.sprites';
-import {
-  submitLevel,
-  startInterval,
-  setResult,
-  setScore,
-} from './check-ris.behavior';
+import initiateCheckRis from './module/check-ris/check-ris.initiate';
+import initiateSpaceCheck from './module/space-check/space-check.initiate';
+import { version } from '../package.json';
+import jquery from 'jquery';
 
-const results = Object.freeze({
-  WIN: 'You Win ! 🏆',
-  LOSE: 'You Lose ! 👎',
-});
-
-$(function () {
-  const element = document.getElementById('info');
-  const tooltip = $('#info').tooltip({
-    container: element,
-    placement: 'top',
-  });
-  tooltip.tooltip('show');
-  setTimeout(() => {
-    tooltip.tooltip('hide');
-  }, 4000);
-});
+window.$ = window.jQuery = jquery;
 
 $(function () {
   $('#jumbotron').css({
-    height: document.documentElement.clientHeight,
+    height: document.documentElement.clientHeight
   });
+  $('#score').hide();
+  $('#score').before(mainMenu());
+  const footer = $('#footer');
 
-  let checkRisGame = new CheckRis();
-  let score = 0;
-  let result = null;
-  drawGame(checkRisGame);
+  $('#contrib').html(`⚡ @rapiddeath | ${version}`);
 
-  const resetGame = () => {
-    checkRisGame.reset();
-    setResult('');
-    drawGame(checkRisGame);
-  };
-
-  let prevInterval = null;
-  let initialInterval = null;
-  $(document).on('keyup touchstart', function (event) {
-    if (
-      event.which === checkRisGame.INTERACTION_KEY_CODE ||
-      event.type === 'touchstart'
-    ) {
-      if (result) {
-        resetGame();
-        result = null;
-      }
-
-      if (prevInterval) {
-        clearInterval(prevInterval);
-      }
-
-      if (checkRisGame.LEVEL === 0) {
-        if (!initialInterval) {
-          initialInterval = startInterval(0, checkRisGame);
-          const randomTimeOut = Math.floor(Math.random() * 1500 + 1000);
-          setTimeout(() => {
-            clearInterval(initialInterval);
-            checkRisGame.LEVEL = checkRisGame.LEVEL + 1;
-            initialInterval = null;
-          }, randomTimeOut);
-        }
-        return;
-      }
-
-      if (
-        checkRisGame.LEVEL >= 1 &&
-        checkRisGame.LEVEL <= checkRisGame.MAX_LEVELS
-      ) {
-        const isLost = submitLevel(checkRisGame);
-        if (!isLost) {
-          prevInterval = startInterval(checkRisGame.LEVEL, checkRisGame);
-          checkRisGame.LEVEL = checkRisGame.LEVEL + 1;
-        } else {
-          setResult(results.LOSE);
-          result = results.LOSE;
-        }
-        if (checkRisGame.LEVEL > checkRisGame.MAX_LEVELS) {
-          setResult(results.WIN);
-          result = results.WIN;
-          score = score + 1;
-          setScore(score);
-        }
-      }
-    }
+  $(`#checkris`).click(() => {
+    $('#menu').remove();
+    $('#score').show();
+    initiateCheckRis();
+    footer.hide();
+  });
+  $(`#spacecheck`).click(() => {
+    $('#menu').remove();
+    $('#score').show();
+    initiateSpaceCheck();
+    footer.hide();
   });
 });
+
+function mainMenu() {
+  return `<div id="menu" class="d-flex flex-wrap align-content-center justify-content-center mt-4">
+            <div id="checkris" class="d-flex p-3 m-2 menu-item">
+              <div class="text-center m-auto">Check Ris 🏁</div>
+            </div>
+            <div id="spacecheck" class="d-flex p-3 m-2 menu-item">
+              <div class="text-center m-auto">Space Check 🚀</div>
+            </div>
+          </div>`;
+}

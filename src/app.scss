@@ -5,9 +5,23 @@
   background-color: #ffffff;
 }
 
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.heading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
 .custom-control-label {
   vertical-align: top;
 }
+
 .custom-control-inline {
   margin-right: 0 !important;
 }
@@ -35,11 +49,23 @@
   margin-top: 2.5rem;
 }
 
-.custom-checkbox
-  .custom-control-input:disabled:checked
-  ~ .custom-control-label::before {
+.custom-checkbox .custom-control-input:disabled:checked~.custom-control-label::before {
   background-color: rgba(0, 123, 255, 1);
 }
+
 .result {
   min-height: 2rem;
+}
+
+
+.menu-item {
+  height: 100px;
+  min-width: 200px;
+  font-size: 1.2rem;
+  background-color: #353b48;
+  color: white;
+  border-radius: 7px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  cursor: pointer;
 }

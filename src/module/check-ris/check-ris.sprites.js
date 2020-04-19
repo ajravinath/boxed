@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 const renderRow = (renderLevel, cols) => {
   let elements = '';
   for (let i = 0; i < cols; i++) {
