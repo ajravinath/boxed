@@ -40,7 +40,7 @@
     "@mdi/font": "^5.0.45",
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
-    "jquery-ui": "^1.12.1",
+    "jquery-ui": "^1.13.2",
     "popper.js": "^1.16.1",
     "pretty-checkbox": "^3.0.3",
     "uuid": "^7.0.3"
